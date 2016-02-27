@@ -11,8 +11,8 @@ public class AllCases {
     boolean aBoolean = true;
     private int privateInt = 1;
 
-    public String toString(){
-        return  "AllCases \n"
+    public String toString() {
+        return "AllCases \n"
                 + "publicInt = " + publicInt + "; \n"
                 + "protectedInt = " + protectedInt + "; \n"
                 + "aByte = " + aByte + "; \n"
@@ -24,5 +24,14 @@ public class AllCases {
                 + "aChar = " + aChar + "; \n"
                 + "aBoolean = " + aBoolean + "; \n"
                 + "privateInt = " + privateInt + ";";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null)
+            return false;
+        if (!o.getClass().equals(AllCases.class))
+            return false;
+        return toString().equals(o.toString());
     }
 }
