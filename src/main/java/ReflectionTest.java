@@ -9,9 +9,11 @@ public class ReflectionTest {
 
     /**
      * Сохранение экземпляра класса
+     *
      * @param fileName имя файла
-     * @param obj экземпляр класса
-     * @throws Exception
+     * @param obj      экземпляр класса
+     * @throws FileNotFoundException  если не удалось открыть файл на запить
+     * @throws IllegalAccessException если нет доступа к полю
      */
     public static void saveClass(String fileName, Object obj) throws FileNotFoundException,
             IllegalAccessException {
